@@ -1,6 +1,6 @@
-# **Contains Duplicate**
-
-<hr style="border: none; height: 3px; background-color: #4CAF50;">
+<h1 style="border-bottom: 3px solid #4CAF50; padding-bottom: 6px;">
+  Contains Duplicate
+</h1>
 
 
 **Difficulty:** <span style="color:green"><b>Easy</b></span>  
