@@ -10,7 +10,7 @@
 
 # Problem Overview
 
-## Restating the Problem (Simply)
+## Restating the Problem 
 
 You are given an array of integers and a target value.
 
