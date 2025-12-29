@@ -308,7 +308,6 @@ For each value `x`:
 - Check whether `need` already exists
 
 This enforces the invariant **directly**.
-![image.png](attachment:170910d2-d9f2-42b5-bb8c-48b6dfc6523d:da6b3d6b-279a-4271-a72c-dc6bd8e5214e.png)
 ## Pseudocode
 
 ```
