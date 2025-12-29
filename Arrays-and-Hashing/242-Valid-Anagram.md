@@ -6,7 +6,11 @@
 **Problem Link:** [Valid Anagram](https://leetcode.com/problems/valid-anagram/description/)  
 **Tags:** `String` `Hashing` `Frequency Count` `Membership Check`
 
+---
+
 # Problem Overview
+
+## Restating the Problem
 
 We are given two strings **`s`** and **`t`** and asked a deceptively simple question:
 
@@ -432,6 +436,8 @@ Reasoning stays identical:
 
 ---
 
+# Final Takeaways
+
 ### Combined Reasoning + Complexity Table
 
 | Approach | Core Idea | Time Reasoning | **Time Complexity** | Space Reasoning | **Space Complexity** |
@@ -440,10 +446,6 @@ Reasoning stays identical:
 | **Better Solution (Sorting)** | Canonicalize order | Sorting forces both strings into a comparable form; repeated comparisons during sorting dominate total work | **`O(n log n)`** | Extra space for sorted character arrays / copies of strings | **`O(n)`** |
 | **Optimal Solution (Frequency Count)** | Frequency balancing invariant | Each character is visited a constant number of times; no reordering or comparisons are required | **`O(n)`** | Fixed-size frequency structure since alphabet size is bounded (lowercase English) | **`O(1)`** |
 | **Optimal (Unicode Variant)** | Frequency balancing with map | Same linear scan logic, but frequency storage grows with the number of distinct characters | **`O(n)`** | Storage proportional to distinct characters encountered | **`O(k)`** |
-
----
-
-# Final Takeaways
 
 ### One-Line Mental Model
 
