@@ -8,7 +8,7 @@
 
 # Problem Overview
 
-We are given two strings **s** and **t** and asked a deceptively simple question:
+We are given two strings **`s`** and **`t`** and asked a deceptively simple question:
 
 **Can one string be rearranged to form the other?**
 
@@ -432,47 +432,14 @@ Reasoning stays identical:
 
 ---
 
-# Interview Perspective
-
 ### Combined Reasoning + Complexity Table
 
 | Approach | Core Idea | Time Reasoning | **Time Complexity** | Space Reasoning | **Space Complexity** |
 | --- | --- | --- | --- | --- | --- |
-| **Brute Force (Permutations)** | Try all rearrangements | Number of possible permutations of a length-`n` string is `n!`, which grows explosively and becomes infeasible even for small `n` | **O(n!)** | Space needed for recursion stack or generating a permutation of length `n` | **O(n)** |
-| **Better Solution (Sorting)** | Canonicalize order | Sorting forces both strings into a comparable form; repeated comparisons during sorting dominate total work | **O(n log n)** | Extra space for sorted character arrays / copies of strings | **O(n)** |
-| **Optimal Solution (Frequency Count)** | Frequency balancing invariant | Each character is visited a constant number of times; no reordering or comparisons are required | **O(n)** | Fixed-size frequency structure since alphabet size is bounded (lowercase English) | **O(1)** |
-| **Optimal (Unicode Variant)** | Frequency balancing with map | Same linear scan logic, but frequency storage grows with the number of distinct characters | **O(n)** | Storage proportional to distinct characters encountered | **O(k)** |
-
-### How to explain this verbally
-
-1. “Anagrams ignore order, so we focus on frequency.”
-2. “If both strings induce the same frequency map, they are anagrams.”
-3. “I increment for one string, decrement for the other.”
-4. “Any imbalance means failure.”
-
-This sounds **confident and invariant-driven**.
-
-### Why this approach over sorting?
-
-- Sorting introduces unnecessary overhead
-- Frequency counting aligns directly with the definition
-- It scales better and generalizes to Unicode
-
-### Common Follow-Up Questions
-
-- What if characters are Unicode?
-- What if input size is huge?
-- Can you early-exit on mismatch?
-- What if strings are streamed?
-
-All are handled naturally by the frequency-balance model.
-
-### Interview Red Flags
-
-- Jumping straight to code
-- Treating sorting as “the” solution
-- Failing to articulate *why* it works
-- Not recognizing the invariant
+| **Brute Force (Permutations)** | Try all rearrangements | Number of possible permutations of a length-`n` string is `n!`, which grows explosively and becomes infeasible even for small `n` | **`O(n!)`** | Space needed for recursion stack or generating a permutation of length `n` | **`O(n)`** |
+| **Better Solution (Sorting)** | Canonicalize order | Sorting forces both strings into a comparable form; repeated comparisons during sorting dominate total work | **`O(n log n)`** | Extra space for sorted character arrays / copies of strings | **`O(n)`** |
+| **Optimal Solution (Frequency Count)** | Frequency balancing invariant | Each character is visited a constant number of times; no reordering or comparisons are required | **`O(n)`** | Fixed-size frequency structure since alphabet size is bounded (lowercase English) | **`O(1)`** |
+| **Optimal (Unicode Variant)** | Frequency balancing with map | Same linear scan logic, but frequency storage grows with the number of distinct characters | **`O(n)`** | Storage proportional to distinct characters encountered | **`O(k)`** |
 
 ---
 
@@ -493,16 +460,5 @@ All are handled naturally by the frequency-balance model.
 - Exact counts matter
 - Equality under rearrangement
 - Conservation-style problems
-
-### Transfer to Harder Problems
-
-This logic appears in:
-
-- Sliding window problems
-- Permutation matching
-- String isomorphism
-- Subarray frequency constraints
-
-Master this pattern once — reuse it everywhere.
 
 ---
