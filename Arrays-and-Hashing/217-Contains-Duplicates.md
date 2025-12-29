@@ -155,13 +155,13 @@ return false
 - Each lookup answers the question: *has this value appeared before?*
 - Redundant comparisons are eliminated entirely
 
-## Time Behavior (Reasoned)
+## Time Behavior
 
 - Each element is processed once
 - Each lookup and insertion is constant on average
 - Total work grows proportionally with input size
 
-## Space Behavior (Reasoned)
+## Space Behavior
 
 - One entry per unique value
 - In the worst case, all values are distinct
@@ -254,12 +254,12 @@ return false
 
 This enforces the invariant with **minimum possible work**.
 
-## Time Behavior (Reasoned)
+## Time Behavior
 
 - Single pass through the array
 - Constant-time membership checks on average
 
-## Space Behavior (Reasoned)
+## Space Behavior
 
 - One entry per unique value
 - Worst case when all values are distinct
