@@ -1,11 +1,10 @@
 <h1 style="border-bottom: 3px solid #4CAF50; padding-bottom: 6px;">
-  Valid Anagrams
+  Valid Anagram
 </h1>
 
-
 **Difficulty:** <span style="color:green"><b>Easy</b></span>  
-**Problem Link:** [Contains Duplicate](https://leetcode.com/problems/valid-anagram/description/)  
-**Tags:** `String` `Hashing` `Frequency Count`
+**Problem Link:** [Valid Anagram](https://leetcode.com/problems/valid-anagram/description/)  
+**Tags:** `String` `Hashing` `Frequency Count` `Membership Check`
 
 
 # Problem Overview
